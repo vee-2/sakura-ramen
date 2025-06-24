@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+  .my-body {
+    margin: 0 0;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  h1 {
+    font-weight: bold;
+    font-size: 96px;
+    text-align: center;
+  }
+
+  h2 {
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 80px;
+    color: #9F0908;
+    display: flex;
+    justify-content: center;
+    padding-top: 120px;
+    padding-bottom: 64px;
+    margin: 0;
+  }
+
+  h3 {
+    font-family: "Economica", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 56px;
+    color: #000000;
+  }
+
+  a {
+    color: white;
+    margin: 0 16px;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: palevioletred;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+
+  .first-container {
+    height: 100vh;
+    color: white;
+    background-image: url('./assets/img/1_hero/JPG/hero_bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 0 160px;
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 350;
+    font-style: normal;
+  }
+
+  .links-logo {
+    height: 112px;
+    max-width: 1440px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+  .links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 24px;
+  }
+
+  .button {
+    background-color: #9F0908;
+    border: 2px solid white;
+    border-radius: 10px;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    transition-duration: 0.4s;
+  }
+
+  .button:hover {
+    background-color: rgb(205, 79, 79);
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  .phone {
+    height: 24px;
+    width: 24px;
+  }
+
+  .title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 24px;
+  }
+
+  .top {
+    height: 64px;
+    width: 64px;
+    object-fit: cover;
+  }
+
+  .order-container {
+    padding: 120px 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .pick {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .ord-img {
+    width: 128px;
+  }
+
+  .txt {
+    font-family: "Economica", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 56px;
+  }
+
+  .menu {
+    background-image: url(./assets/img/3_section_our_menu/JPG/section_our_menu_bg.jpg);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 120px;
+  }
+
+  .boxes {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .table {
+    font-family: "Raleway", sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 32px;
+    color: #675E54;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    padding-right: 250px;
+    padding-bottom: 60px;
+  }
+
+  .table_middle {
+    font-family: "Raleway", sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 32px;
+    color: #675E54;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    padding-left: 250px;
+    padding-bottom: 60px;
+  }
+
+  .plate {
+    width: 352px;
+    height: 352px;
+  }
+
+  th {
+    font-family: "Economica", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 56px;
+    color: #000000;
+    padding-bottom: 16px;
+  }
+
+  .tr {
+    padding-bottom: 8px;
+  }
+
+  tr td:first-child {
+    padding-right: 32px;
+  }
+
+  .find_us {
+    padding-bottom: 8px;
+  }
+
+  .address {
+    font-family: "Raleway", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    color: black;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 64px;
+  }
+
+  .img_marker {
+    height: 24px;
+    width: 24px;
+  }
+
+  .maps {
+    width: 100%;
+    height: 600px;
+    border: 0;
+  }
+
+  .footer {
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 44px;
+    height: 144px;
+    background-color: #222224;
+    color: white;
+    padding: 0 160px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .ftr-right {
+    display: flex;
+    margin: 0;
+    gap: 5px;
+  }
+
+  .ftr-img {
+    height: 44px;
+    object-fit: cover;
+  }
+
+  .ftr-logo {
+    width: 40px;
+    height: 40px;
+  }
+
+  .ftr-logo:hover {
+    cursor: pointer;
+  }
+
+  @media (max-width: 768px) {
+    .first-container {
+      padding: 0 24px;
+    }
+
+    .disappear_mobile {
+      display: none;
+    }
+
+    .fs_mobile20 {
+      font-size: 20px;
+    }
+
+    h1 {
+      font-size: 72px;
+    }
+
+    h2 {
+      font-size: 64px;
+      padding-top: 96px;
+      padding-bottom: 48px;
+      text-align: center;
+    }
+
+    .order-container {
+      padding: 0 24px;
+      padding-bottom: 96px;
+    }
+
+    .ord-img {
+      width: 112px;
+    }
+
+    .txt {
+      font-size: 32px;
+    }
+
+    .pick {
+      gap: 8px;
+    }
+
+    .menu {
+      padding: 0 24px;
+    }
+
+    th {
+      font-size: 32px;
+    }
+
+    td {
+      font-size: 24px;
+    }
+
+    .table {
+      padding-bottom: 32px;
+      padding-right: 0;
+      gap: 24px;
+    }
+
+    .table_middle {
+      padding-left: 0;
+    }
+
+    .address {
+      padding-bottom: 48px;
+    }
+
+    .footer {
+      padding: 0 24px;
+    }
+
+    a {
+      margin: 0 8px;
+    }
+  }
+
+  @media (max-width: 375px) {
+    .first-container {
+      padding: 0 16px;
+    }
+
+    .fs_mobile16 {
+      font-size: 16px;
+    }
+
+    h1 {
+      font-size: 44px;
+    }
+
+    h2 {
+      font-size: 40px;
+      padding-top: 72px;
+      padding-bottom: 40px;
+      text-align: center;
+    }
+
+    .order-container {
+      padding: 0 16px;
+      padding-bottom: 72px;
+      flex-direction: column;
+      gap: 32px;
+    }
+
+    .menu {
+      padding: 0 16px;
+    }
+
+    .table {
+      padding-bottom: 32px;
+      padding-right: 0;
+      gap: 24px;
+      flex-direction: column;
+    }
+
+    .table_middle {
+      padding-left: 0;
+      flex-direction: column-reverse;
+      gap: 24px;
+    }
+
+    .address {
+      padding-bottom: 40px;
+    }
+
+    .footer {
+      padding: 0 24px;
+      height: 86px;
+    }
+
+    /*img[src*="./assets/img/5_section_footer/PNG/sakura_ramen_logo_and_text.png"] {
+      display: none;
+    }*/
+
+    img[src*="./assets/img/5_section_footer/PNG/sakura_ramen_logo_and_text.png"] {
+      width: 44px;
+      content: url(./assets/img/1_hero/PNG/sakura_logo.png);
+    }
+
+    a {
+      margin: 0 4px;
+    }
+
+    .ftr-logo {
+      width: 32px;
+      height: 32px;
+    }
+  }
+</style>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Economica:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet">
+</head>
+
+<body class="my-body">
+
+  <section class="first-container">
+    <header class="links-logo">
+      <img class="top" src="./assets/img/1_hero/PNG/sakura_logo.png" alt="logo">
+      <nav class="links">
+        <a class="disappear_mobile" href="#menu">MENU </a> <br>
+        <a class="disappear_mobile" href="#maps">LOCATIONS </a> <br>
+        <a class="disappear_mobile" href="#ftr">ABOUT </a> <br>
+        <a class="button fs_mobile20 fs_mobile16" href="tel:0176 54564534">
+          <img class="phone" src="./assets/img/1_hero/PNG/phone.png" alt="phone-icon"> 0176 54564534
+        </a>
+      </nav>
+    </header>
+    <div class="title fs_mobile20 fs_mobile16">
+      <h1>SAKURA RAMEN</h1>
+      <span>THE BEST RAMEN IN TOWN</span>
+    </div>
+  </section>
+
+  <h2>HOW TO ORDER</h2>
+  <div class="order-container">
+    <div class="pick">
+      <img class="ord-img" src="./assets/img/2_section_how_to_order/PNG/noodle.png" alt="noodle-pot">
+      <span class="txt">Pick your <br> noodle</span>
+    </div>
+
+    <div class="pick">
+      <img class="ord-img" src="./assets/img/2_section_how_to_order/PNG/broth.png" alt="broth">
+      <span class="txt">Pick your <br> broth</span>
+    </div>
+
+    <div class="pick">
+      <img class="ord-img" src="./assets/img/2_section_how_to_order/PNG/egg.png" alt="egg">
+      <span class="txt">Add your <br> toppings</span>
+    </div>
+  </div>
+
+  <section class="menu" id="menu">
+    <h2>OUR MENU</h2>
+    <div class="boxes">
+      <div class="table">
+        <img class="plate" src="./assets/img/3_section_our_menu/Png/R1.png" alt="plate1">
+        <table class="price">
+          <tbody>
+            <th colspan="2">Tonkotsu Ramen</th>
+            <tr>
+              <td>CHICKEN</td>
+              <td>11,95 €</td>
+            </tr>
+            <tr>
+              <td>BEEF</td>
+              <td>12,95 €</td>
+            </tr>
+            <tr>
+              <td>SHRIMP</td>
+              <td>13,95 €</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="table_middle">
+        <table class="price">
+          <tbody>
+            <th colspan="2">Spicy Miso Ramen</th>
+            <tr>
+              <td>CHICKEN</td>
+              <td>11,95 €</td>
+            </tr>
+            <tr>
+              <td>BEEF</td>
+              <td>12,95 €</td>
+            </tr>
+            <tr>
+              <td>SHRIMP</td>
+              <td>13,95 €</td>
+            </tr>
+          </tbody>
+        </table>
+        <img class="plate" src="./assets/img/3_section_our_menu/Png/R2.png" alt="plate2">
+      </div>
+
+      <div class="table">
+        <img class="plate" src="./assets/img/3_section_our_menu/Png/R3.png" alt="plate3">
+        <table class="price">
+          <tbody>
+            <th colspan="2">Shio Ramen</th>
+            <tr>
+              <td>CHICKEN</td>
+              <td>11,95 €</td>
+            </tr>
+            <tr>
+              <td>BEEF</td>
+              <td>12,95 €</td>
+            </tr>
+            <tr>
+              <td>SHRIMP</td>
+              <td>13,95 €</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <h2 class="find_us" id="maps">FIND US AT</h2>
+  <div class="address fs_mobile20 fs_mobile16">
+    <img class="img_marker" src="./assets/img/4_section_find_us_at/PNG/map_marker.png" alt="map_marker">
+    <span>Kapuzinerstraße 31, München, 80337</span>
+  </div>
+  <iframe class="maps"
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2663.211181371443!2d11.55868941219626!3d48.125450671122294!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479ddf44cf7e4d5f%3A0x55a7bd29a73e9161!2sKapuzinerstra%C3%9Fe%2031%2C%2080337%20M%C3%BCnchen%2C%20Deutschland!5e0!3m2!1sde!2sat!4v1748277742158!5m2!1sde!2sat"
+    style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  <footer class="footer" id="ftr">
+    <div>
+      <img class="ftr-img" src="./assets/img/5_section_footer/PNG/sakura_ramen_logo_and_text.png" alt="logo">
+    </div>
+    <div class="ftr-right">
+      <a href="https://www.tripadvisor.at/">
+        <img class="ftr-logo" src="./assets/img/5_section_footer/PNG/tripadvisor_logo.png" alt="tripadvisor_logo">
+      </a>
+      <a href="https://www.facebook.com/?locale=de_DE">
+        <img class="ftr-logo" src="./assets/img/5_section_footer/PNG/facebook_logo.png" alt="facebook_logo">
+      </a>
+      <a href="https://www.instagram.com/">
+        <img class="ftr-logo" src="./assets/img/5_section_footer/PNG/instagrram_logo.png" alt="instagram_logo">
+      </a>
+    </div>
+  </footer>
+
+</body>
+
+</html>
