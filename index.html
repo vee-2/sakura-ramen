@@ -55,6 +55,7 @@
     background-image: url('./assets/img/1_hero/JPG/hero_bg.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     padding: 0 160px;
     font-family: "Raleway", sans-serif;
     font-optical-sizing: auto;
@@ -241,7 +242,7 @@
     height: 144px;
     background-color: #222224;
     color: white;
-    padding: 0 160px;
+    padding: 0 16px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -267,13 +268,37 @@
     cursor: pointer;
   }
 
-  @media (max-width: 768px) {
-    .first-container {
+  @media (max-width: 1035px) {
+    .disappear_mobile {
+      display: none;
+    }
+
+    .menu {
       padding: 0 24px;
     }
 
-    .disappear_mobile {
-      display: none;
+    th {
+      font-size: 32px;
+    }
+
+    td {
+      font-size: 24px;
+    }
+
+    .table {
+      padding-bottom: 32px;
+      padding-right: 0;
+      gap: 24px;
+    }
+
+    .table_middle {
+      padding-left: 0;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .first-container {
+      padding: 0 24px;
     }
 
     .fs_mobile20 {
@@ -308,28 +333,6 @@
       gap: 8px;
     }
 
-    .menu {
-      padding: 0 24px;
-    }
-
-    th {
-      font-size: 32px;
-    }
-
-    td {
-      font-size: 24px;
-    }
-
-    .table {
-      padding-bottom: 32px;
-      padding-right: 0;
-      gap: 24px;
-    }
-
-    .table_middle {
-      padding-left: 0;
-    }
-
     .address {
       padding-bottom: 48px;
     }
@@ -340,6 +343,66 @@
 
     a {
       margin: 0 8px;
+    }
+  }
+
+  @media (max-width: 725px) {
+    .menu {
+      padding: 0 16px;
+    }
+
+    .plate {
+      width: 300px;
+      height: auto;
+    }
+
+    .table {
+      padding-bottom: 32px;
+      padding-right: 0;
+      gap: 24px;
+      flex-direction: column;
+    }
+
+    .table_middle {
+      padding-left: 0;
+      flex-direction: column-reverse;
+      gap: 24px;
+    }
+
+    .bigger-padding {
+      padding-bottom: 72px;
+    }
+
+    .footer {
+      padding: 0 24px;
+      height: 86px;
+    }
+
+    /*img[src*="./assets/img/5_section_footer/PNG/sakura_ramen_logo_and_text.png"] {
+      display: none;
+    }*/
+
+    img[src*="./assets/img/5_section_footer/PNG/sakura_ramen_logo_and_text.png"] {
+      width: 44px;
+      content: url(./assets/img/1_hero/PNG/sakura_logo.png);
+    }
+
+    a {
+      margin: 0 4px;
+    }
+
+    .ftr-logo {
+      width: 32px;
+      height: 32px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .order-container {
+      padding: 0 16px;
+      padding-bottom: 72px;
+      flex-direction: column;
+      gap: 32px;
     }
   }
 
@@ -372,39 +435,6 @@
       text-align: center;
     }
 
-    .order-container {
-      padding: 0 16px;
-      padding-bottom: 72px;
-      flex-direction: column;
-      gap: 32px;
-    }
-
-    .menu {
-      padding: 0 16px;
-    }
-
-    .plate {
-      width: 300px;
-      height: auto;
-    }
-
-    .table {
-      padding-bottom: 32px;
-      padding-right: 0;
-      gap: 24px;
-      flex-direction: column;
-    }
-
-    .table_middle {
-      padding-left: 0;
-      flex-direction: column-reverse;
-      gap: 24px;
-    }
-
-    .bigger-padding {
-      padding-bottom: 72px;
-    }
-
     .address {
       padding-bottom: 40px;
     }
@@ -413,29 +443,6 @@
       width: 16px;
       height: 16px;
       align-self: center;
-    }
-
-    .footer {
-      padding: 0 24px;
-      height: 86px;
-    }
-
-    /*img[src*="./assets/img/5_section_footer/PNG/sakura_ramen_logo_and_text.png"] {
-      display: none;
-    }*/
-
-    img[src*="./assets/img/5_section_footer/PNG/sakura_ramen_logo_and_text.png"] {
-      width: 44px;
-      content: url(./assets/img/1_hero/PNG/sakura_logo.png);
-    }
-
-    a {
-      margin: 0 4px;
-    }
-
-    .ftr-logo {
-      width: 32px;
-      height: 32px;
     }
   }
 </style>
@@ -535,8 +542,8 @@
         <img class="plate" src="./assets/img/3_section_our_menu/Png/R2.png" alt="plate2">
       </div>
 
-      <div class="table">
-        <img class="plate bigger-padding" src="./assets/img/3_section_our_menu/Png/R3.png" alt="plate3">
+      <div class="table bigger-padding">
+        <img class="plate" src="./assets/img/3_section_our_menu/Png/R3.png" alt="plate3">
         <table class="price">
           <tbody>
             <th colspan="2">Shio Ramen</th>
