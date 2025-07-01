@@ -268,6 +268,12 @@
     cursor: pointer;
   }
 
+  @media (max-width: 1085px) {
+    h1 {
+      font-size: 70px;
+    }
+  }
+
   @media (max-width: 1035px) {
     .disappear_mobile {
       display: none;
@@ -296,17 +302,19 @@
     }
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 884px) {
+    h1 {
+      font-size: 56px;
+    }
+  }
+
+  @media (max-width: 772px) {
     .first-container {
       padding: 0 24px;
     }
 
     .fs_mobile20 {
       font-size: 20px;
-    }
-
-    h1 {
-      font-size: 72px;
     }
 
     h2 {
@@ -397,12 +405,24 @@
     }
   }
 
-  @media (max-width: 480px) {
+  @media (max-width: 510px) {
     .order-container {
       padding: 0 16px;
       padding-bottom: 72px;
       flex-direction: column;
       gap: 32px;
+    }
+
+    h1 {
+      font-size: 40px;
+    }
+
+    h2 {
+      font-size: 45px;
+    }
+
+    .bigger-fs {
+      font-size: 54px;
     }
   }
 
@@ -425,14 +445,18 @@
     }
 
     h1 {
-      font-size: 44px;
+      font-size: 32px;
     }
 
     h2 {
-      font-size: 40px;
+      font-size: 32px;
       padding-top: 72px;
       padding-bottom: 40px;
       text-align: center;
+    }
+
+    .bigger-fs {
+      font-size: 48px;
     }
 
     .address {
@@ -498,7 +522,7 @@
   </div>
 
   <section class="menu" id="menu">
-    <h2>OUR MENU</h2>
+    <h2 class="bigger-fs">OUR MENU</h2>
     <div class="boxes">
       <div class="table">
         <img class="plate" src="./assets/img/3_section_our_menu/Png/R1.png" alt="plate1">
